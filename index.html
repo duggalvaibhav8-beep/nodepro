@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Node App</title>
+</head>
+<body>
+    <h1>Node.js App Running 🚀</h1>
+    <button onclick="getData()">Call API</button>
+
+    <p id="output"></p>
+
+    <script>
+        async function getData() {
+            const res = await fetch('/api');
+            const data = await res.json();
+            document.getElementById("output").innerText = data.message;
+        }
+    </script>
+</body>
+</html>
