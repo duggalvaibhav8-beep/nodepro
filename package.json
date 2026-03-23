@@ -1,0 +1,21 @@
+{
+  "name": "jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/duggalvaibhav8-beep/nodepro#readme",
+  "bugs": {
+    "url": "https://github.com/duggalvaibhav8-beep/nodepro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duggalvaibhav8-beep/nodepro.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}
