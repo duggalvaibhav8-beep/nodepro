@@ -8,5 +8,5 @@ jobs:
     steps: 
       - uses: actions/checkout@v4
       - run: npm install express mongoose cors dotenv
-      - run: npm start 
+      - run: pm2 start server.js --name kunj  
       
