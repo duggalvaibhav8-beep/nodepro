@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Routes
 app.get("/api", (req, res) => {
     res.json({
-        message: "Hello from Naval bihari da and always chant shri kunj bihari shri haridass  🚀",
+        message: "Hello from vaibhav duggal  and always chant shri kunj bihari shri haridass  🚀",
         status: "success"
     });
 });
