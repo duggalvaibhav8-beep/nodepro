@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         run: |
           cd /var/www/nodepro
-          npm install
+          sudo npm install
 
       - name: Restart Application
         run: |
