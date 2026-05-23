@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
     steps: 
       - uses: actions/checkout@v4
-      - run: npm install express mongoose cors dotenv
-      - run: npm install pm2 -g 
-      - run: pm2 start server.js --name kunj  
+      - run: sudo npm install express mongoose cors dotenv
+      - run: sudo npm install pm2 -g 
+      - run: sudo pm2 start server.js --name kunj  
       
