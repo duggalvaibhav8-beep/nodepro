@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Dependencies
         run: |
-          cd /var/www/myapp_release
+          cd /var/www/nodepro
           npm install
           npm install pm2 -g 
       - run: sudo pm2 start server.js --name kunj  
