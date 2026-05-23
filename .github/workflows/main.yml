@@ -1,16 +1,34 @@
-name: first git 
-on: 
-  push: 
-    branches: ['main']
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  run-app: 
+  deploy:
     runs-on: self-hosted
-    steps: 
-      - uses: actions/checkout@v4
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Copy Project To Deployment Folder
+        run: |
+          sudo rm -rf /var/www/nodepro/*
+          sudo cp -r . /var/www/nodepro/
+
       - name: Install Dependencies
         run: |
           cd /var/www/nodepro
           npm install
-          npm install pm2 -g 
-      - run: sudo pm2 start server.js --name kunj  
-      
+
+      - name: Restart Application
+        run: |
+          cd /var/www/nodepro
+
+          pm2 delete myapp || true
+
+          pm2 start server.js --name myapp
+
+          pm2 save
